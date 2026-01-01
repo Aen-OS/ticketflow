@@ -14,9 +14,9 @@ Features List:
 - Mock API (JSON server or static data file)
 - Loading and error states
 
-### Tech used
+### Tech Stack
 
--
+- NextJS, React, Tailwind
 
 ### Key decisions
 

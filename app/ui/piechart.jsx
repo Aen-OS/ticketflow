@@ -29,8 +29,8 @@ export default function PrioPieChart({ isAnimationActive = true }) {
         data={data}
         label={(entry) => entry.name}
         // labelLine={false}
-        innerRadius="70%"
-        outerRadius="85%"
+        innerRadius="65%"
+        outerRadius="80%"
         // Corner radius is the rounded edge of each pie slice
         cornerRadius="50%"
         fill="#8884d8"
