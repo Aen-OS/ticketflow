@@ -2,7 +2,7 @@
 
 import data from "../api/tickets.json";
 import { useState, useRef } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarClock } from "lucide-react";
 
 export default function Main() {
   const rows = data.tickets;
@@ -59,9 +59,9 @@ export default function Main() {
   const pageData = filteredData.slice(start, end);
 
   return (
-    <main className="flex flex-col gap-3 m-5">
-      <div className="border-1 p-3">
-        <form action="" className="">
+    <main className="px-5 flex flex-col gap-3 lg:container lg:mx-auto">
+      <div className="border-2 rounded p-5">
+        <form className="">
           <div className="flex flex-row">
             <input
               type="text"
@@ -71,8 +71,8 @@ export default function Main() {
               className="input w-full p-2"
             />
           </div>
-          <div className="flex flex-row">
-            <div className="py-2 flex gap-3">
+          <div className="flex flex-col md:flex-row pt-4">
+            <div className="flex gap-3">
               <select
                 className="select select-neutral"
                 id="prio"
@@ -96,14 +96,18 @@ export default function Main() {
                 <option value="Assigned">Assigned</option>
                 <option value="Closed">Closed</option>
               </select>
-              <input
-                className="input pr-10"
-                id="date"
-                type="date"
-                min="2024-02-15"
-                max="2024-02-21"
-                onChange={(e) => setDate(e.target.value)}
-              />
+              <label className="input w-full">
+                <span className="label lg:hidden">
+                  <CalendarClock />
+                </span>
+                <input
+                  id="date"
+                  type="date"
+                  min="2024-02-15"
+                  max="2024-02-21"
+                  onChange={(e) => setDate(e.target.value)}
+                />
+              </label>
               <input
                 className="input"
                 id="assigned"
@@ -113,7 +117,7 @@ export default function Main() {
               />
             </div>
             <button
-              className="btn btn-neutral btn-md self-center mx-5"
+              className="btn btn-neutral btn-md self-center mx-5 mt-5 md:mt-auto"
               onClick={clearForm}
             >
               Reset
@@ -121,13 +125,13 @@ export default function Main() {
           </div>
         </form>
       </div>
-      <div className="border-1 w-full p-3">
+      <div className="border-2 rounded w-full p-5">
         <div className="w-full">
-          <div className="">
+          <div className="flex justify-center sm:hidden">
+            <p>Please rotate phone for tickets visibility</p>
+          </div>
+          <div className="hidden sm:flex sm:flex-col">
             <table className="table min-w-full table-fixed w-100 h-80">
-              <caption className="caption-bottom italic text-sm text-gray-400">
-                Helpdesk Dashboard Demo 2026
-              </caption>
               <thead>
                 <tr>
                   <th className="px-3 py-2 text-left w-20">Priority</th>
@@ -172,7 +176,7 @@ export default function Main() {
                 )}
               </tbody>
             </table>
-            <div className="text-center">
+            <div className="text-center pt-5">
               <div className="join">
                 {currentPage === 1 ? (
                   <button className="join-item btn btn-sm btn-disabled">

@@ -13,8 +13,10 @@ export default function Analytics() {
   const oliviaMartinez = userStats[4];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">IT Helpdesk Analytics</h1>
+    <div className="px-5 lg:container lg:mx-auto py-8 font-sans">
+      <h1 className="text-3xl font-bold font-mono mb-8">
+        IT Helpdesk Analytics
+      </h1>
 
       <div className="grid grid-cols-2">
         {/* Summary Cards */}
@@ -75,7 +77,7 @@ export default function Analytics() {
       </div>
 
       {/* IT Engineer Stats */}
-      <div className="bg-gray-100 p-4 rounded shadow-sm mb-8">
+      <div className="bg-gray-100 p-4 rounded shadow-sm">
         <h2 className="text-xl font-semibold mb-4">This Week</h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <div className="bg-white p-3 rounded border border-gray-300">

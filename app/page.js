@@ -3,7 +3,7 @@ import Main from "./ui/main";
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-sans">
       <Main />
     </div>
   );

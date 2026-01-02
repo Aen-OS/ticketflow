@@ -26,11 +26,11 @@ Features List:
 
 - Add create tickets feature to update json database with new tickets to complete CRUD functionality
 - I'd give the IT engineers, teams, and users their own pages with data, history, etc.
+- I'd improve the table: letting the data be ordered by priority, date, or status just by clicking the table head titles.
 
 ### Todo
 
 - loading and error states (dashboard, tickets page, reports page, my account page)
-- improve UI + add responsive css
 
 What's been completed so far:
 
@@ -40,3 +40,5 @@ What's been completed so far:
 - search function for tickets
 - added filters to search
 - ticket detail view
+- my account page
+- Better UI (geist/geistMono fonts + responsive + general tweaks)

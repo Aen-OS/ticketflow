@@ -24,14 +24,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen">
-          <nav className="navbar flex flex-row w-full justify-between">
+          <nav className="navbar flex flex-row w-full justify-between mb-5">
             <a
-              className="text-2xl font-bold m-5 cursor-pointer self-center"
+              className="text-2xl font-bold p-3 cursor-pointer self-center font-mono"
               href="/"
             >
               Helpdesk Dashboard
             </a>
-            <ul className="flex flex-row m-5 gap-5">
+            <ul className="flex flex-row gap-5 font-mono">
               <li className="self-center">
                 <a href="/">Tickets</a>
               </li>
@@ -39,13 +39,10 @@ export default function RootLayout({ children }) {
                 <a href="/analytics">Analytics</a>
               </li>
               <li className="self-center">
-                {/* <a href="/myaccount">My Account</a> */}
                 <a href="/myaccount">
                   <div className="avatar avatar-placeholder">
                     <div className="bg-neutral text-neutral-content w-10 rounded-full">
-                      <span className="text-md">
-                        <UserRound />
-                      </span>
+                      <UserRound />
                     </div>
                   </div>
                 </a>
@@ -53,6 +50,13 @@ export default function RootLayout({ children }) {
             </ul>
           </nav>
           {children}
+          <footer className="footer footer-horizontal footer-center p-10">
+            <aside>
+              <p className="font-bold italic">
+                Helpdesk Dashboard Demo © {new Date().getFullYear()}
+              </p>
+            </aside>
+          </footer>
         </div>
       </body>
     </html>
