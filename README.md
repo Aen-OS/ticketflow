@@ -30,7 +30,7 @@ Features List:
 ### Todo
 
 - loading and error states (dashboard, tickets page, reports page, my account page)
-- improve UI
+- improve UI + add responsive css
 
 What's been completed so far:
 

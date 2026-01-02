@@ -2,6 +2,7 @@
 
 import data from "../api/tickets.json";
 import { useState, useRef } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Main() {
   const rows = data.tickets;
@@ -67,13 +68,13 @@ export default function Main() {
               placeholder="Search tickets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full p-2"
+              className="input w-full p-2"
             />
           </div>
           <div className="flex flex-row">
-            <div className="p-2 flex gap-3">
-              <span>Filters: </span>
+            <div className="py-2 flex gap-3">
               <select
+                className="select select-neutral"
                 id="prio"
                 name="Priority"
                 onChange={(e) => setPriority(e.target.value)}
@@ -85,6 +86,7 @@ export default function Main() {
                 <option value="P4">P4</option>
               </select>
               <select
+                className="select select-neutral"
                 id="stat"
                 name="Status"
                 onChange={(e) => setStatus(e.target.value)}
@@ -95,6 +97,7 @@ export default function Main() {
                 <option value="Closed">Closed</option>
               </select>
               <input
+                className="input pr-10"
                 id="date"
                 type="date"
                 min="2024-02-15"
@@ -102,20 +105,26 @@ export default function Main() {
                 onChange={(e) => setDate(e.target.value)}
               />
               <input
+                className="input"
                 id="assigned"
-                type="select"
+                type="text"
                 placeholder="Assigned To"
                 onChange={(e) => setAssigned(e.target.value)}
               />
             </div>
-            <button onClick={clearForm}>Reset</button>
+            <button
+              className="btn btn-neutral btn-md self-center mx-5"
+              onClick={clearForm}
+            >
+              Reset
+            </button>
           </div>
         </form>
       </div>
       <div className="border-1 w-full p-3">
         <div className="w-full">
-          <div className="overflow-auto">
-            <table className="min-w-full table-fixed w-100 h-80">
+          <div className="">
+            <table className="table min-w-full table-fixed w-100 h-80">
               <caption className="caption-bottom italic text-sm text-gray-400">
                 Helpdesk Dashboard Demo 2026
               </caption>
@@ -164,27 +173,35 @@ export default function Main() {
               </tbody>
             </table>
             <div className="text-center">
-              {currentPage === 1 ? (
-                <span className="text-gray-500">Previous</span>
-              ) : (
-                <button
-                  className="hover:underline"
-                  onClick={() => setCurrentPage(currentPage - 1)}
-                >
-                  Previous
+              <div className="join">
+                {currentPage === 1 ? (
+                  <button className="join-item btn btn-sm btn-disabled">
+                    <ArrowLeft size={16} />
+                  </button>
+                ) : (
+                  <button
+                    className="join-item btn btn-sm"
+                    onClick={() => setCurrentPage(currentPage - 1)}
+                  >
+                    <ArrowLeft size={16} />
+                  </button>
+                )}{" "}
+                <button className="join-item btn btn-sm hover:bg-[#f8f8f8] ">
+                  {currentPage}
                 </button>
-              )}{" "}
-              | {currentPage} |{" "}
-              {currentPage === maxPage ? (
-                <span className="text-gray-500">Next</span>
-              ) : (
-                <button
-                  className="hover:underline"
-                  onClick={() => setCurrentPage(currentPage + 1)}
-                >
-                  Next
-                </button>
-              )}
+                {currentPage === maxPage ? (
+                  <button className="join-item btn btn-sm btn-disabled">
+                    <ArrowRight size={16} />
+                  </button>
+                ) : (
+                  <button
+                    className="join-item btn btn-sm"
+                    onClick={() => setCurrentPage(currentPage + 1)}
+                  >
+                    <ArrowRight size={16} />
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
