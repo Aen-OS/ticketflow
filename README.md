@@ -27,8 +27,8 @@ Features List:
 
 - Add create tickets feature to update json database with new tickets to complete CRUD functionality
 - I'd give the IT engineers, teams, and users their own pages with data, history, etc.
-- I'd improve the table: letting the data be ordered by priority, date, or status just by clicking the table head titles.
-- I'd give a nice looking theme matching the IT ticketing context
+- Improve the table: letting the data be ordered by priority, date, or status just by clicking the table head titles.
+- Implement a theme matching the IT ticketing context
 
 #### What's been done:
 
