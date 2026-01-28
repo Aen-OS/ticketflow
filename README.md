@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/Aen-OS/ticketflow/main/public/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/Aen-OS/ticketflow/main/public/logo.png" width="200" />
 </div>
 <h1 align="center">
   TicketFlow
