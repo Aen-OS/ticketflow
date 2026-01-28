@@ -5,7 +5,7 @@
   TicketFlow
 </h1>
 <p align="center">
-  A frontend dashboard sim<a href="https://ticketflow-an.netlify.app" target="_blank">ticketflow-an.netlify.app</a> built with <a href="https://www.nextjs.org/" target="_blank">NextJS</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  A frontend dashboard sim: <a href="https://ticketflow-an.netlify.app" target="_blank">ticketflow-an.netlify.app</a> built with <a href="https://www.nextjs.org/" target="_blank">NextJS</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
   <img src="https://api.netlify.com/api/v1/badges/4d997a0b-cc18-4a91-8029-cd158c66b878/deploy-status" alt="Netlify Status" />
